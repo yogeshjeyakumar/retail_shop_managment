@@ -1,0 +1,111 @@
+:root {
+    --body-bg-color: #ece0d1;
+    --header-footer-bg-color: linear-gradient(to right, #3e2723, #1b1b1bf5);
+    --nav-text-color: #fdfcfa;
+    --hover-color: #b6895b;
+    --hero-text-color: #2d1f1a;
+    --product-heading-color: #6d4c41;
+    --product-category-bg-color: #f7ede2;
+    --product-category-hover-bg-color: linear-gradient(to right, #8d6e63, #5d4037);
+    --footer-text-color: #fdfcfa;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: var(--body-bg-color);
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    min-height: 380px;
+    margin: 30px auto;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2, h3 {
+    color: var(--hero-text-color);
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+}
+input, button {
+    width: 90%;
+    padding: 6px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid var(--product-heading-color);
+    color: var(--hero-text-color);
+}
+.space{
+    width: 80px;
+    height:50px;
+}
+input[type="file"] {
+    border: none;
+}
+button {
+    background: var(--hover-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+    font-size: 12px;
+    padding: 6px;
+    width: auto;
+    min-width: 80px;
+    border-radius: 4px;
+}
+button:hover {
+    background: var(--product-category-hover-bg-color);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid var(--hero-text-color);
+}
+td{
+    color: var(--hero-text-color);
+}
+thead {
+    background: var(--body-bg-color);
+    color: var(--hero-text-color);
+}
+td img {
+    width: 35px;
+    height: auto;
+    border-radius: 3px;
+}
+.edit-btn, .remove-btn {
+    padding: 4px 6px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    width: auto;
+    min-width: 60px;
+}
+.edit-btn { background: var(--product-heading-color);}
+.remove-btn {background: red;}
+.edit-btn:hover {background: var(--hover-color);}
+.remove-btn:hover { background: darkred;}

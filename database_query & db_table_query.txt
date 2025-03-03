@@ -1,0 +1,140 @@
+CREATE DATABASE `products`;
+
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS `sofa` (
+    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `code` VARCHAR(50) NOT NULL,
+    `name` VARCHAR(255) NOT NULL,
+    `category` VARCHAR(100),
+    `color` VARCHAR(100),
+    `price` DECIMAL(10, 2),
+    `image` VARCHAR(255),
+    `quantity` INT
+);
+
+CREATE TABLE IF NOT EXISTS `beds` (
+    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `code` VARCHAR(50) NOT NULL,
+    `name` VARCHAR(255) NOT NULL,
+    `category` VARCHAR(100),
+    `color` VARCHAR(100),
+    `price` DECIMAL(10, 2),
+    `image` VARCHAR(255),
+    `quantity` INT
+);
+
+CREATE TABLE IF NOT EXISTS `center_table` (
+    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `code` VARCHAR(50) NOT NULL,
+    `name` VARCHAR(255) NOT NULL,
+    `category` VARCHAR(100),
+    `color` VARCHAR(100),
+    `price` DECIMAL(10, 2),
+    `image` VARCHAR(255),
+    `quantity` INT
+);
+
+CREATE TABLE IF NOT EXISTS `chairs` (
+    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `code` VARCHAR(50) NOT NULL,
+    `name` VARCHAR(255) NOT NULL,
+    `category` VARCHAR(100),
+    `color` VARCHAR(100),
+    `price` DECIMAL(10, 2),
+    `image` VARCHAR(255),
+    `quantity` INT
+);
+
+CREATE TABLE customer (
+    id INT AUTO_INCREMENT PRIMARY KEY,      -- Auto-increment ID for each customer
+    name VARCHAR(255) NOT NULL,             -- Customer's name
+    phone VARCHAR(15) NOT NULL,             -- Customer's phone number
+    address TEXT,                           -- Customer's address
+    payment_option VARCHAR(50),             -- Payment option (e.g., cash, card, etc.)
+    total DECIMAL(10, 2) NOT NULL,          -- Total sales amount for the customer
+    generated_at DATETIME DEFAULT CURRENT_TIMESTAMP, -- Date and time of the transaction (defaults to the current timestamp)
+    products_names TEXT                     -- Names of the products purchased (can store multiple product names)
+);
+
+
+CREATE TABLE IF NOT EXISTS `dining_table` (
+    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `code` VARCHAR(50) NOT NULL,
+    `name` VARCHAR(255) NOT NULL,
+    `category` VARCHAR(100),
+    `color` VARCHAR(100),
+    `price` DECIMAL(10, 2),
+    `image` VARCHAR(255),
+    `quantity` INT
+);
+
+CREATE TABLE IF NOT EXISTS `dressing_table` (
+    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `code` VARCHAR(50) NOT NULL,
+    `name` VARCHAR(255) NOT NULL,
+    `category` VARCHAR(100),
+    `color` VARCHAR(100),
+    `price` DECIMAL(10, 2),
+    `image` VARCHAR(255),
+    `quantity` INT
+);
+
+CREATE TABLE IF NOT EXISTS `showcase` (
+    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `code` VARCHAR(50) NOT NULL,
+    `name` VARCHAR(255) NOT NULL,
+    `category` VARCHAR(100),
+    `color` VARCHAR(100),
+    `price` DECIMAL(10, 2),
+    `image` VARCHAR(255),
+    `quantity` INT
+);
+
+CREATE TABLE IF NOT EXISTS `wardrobe` (
+    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `code` VARCHAR(50) NOT NULL,
+    `name` VARCHAR(255) NOT NULL,
+    `category` VARCHAR(100),
+    `color` VARCHAR(100),
+    `price` DECIMAL(10, 2),
+    `image` VARCHAR(255),
+    `quantity` INT
+);
+
+CREATE TABLE IF NOT EXISTS `writing_table` (
+    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `code` VARCHAR(50) NOT NULL,
+    `name` VARCHAR(255) NOT NULL,
+    `category` VARCHAR(100),
+    `color` VARCHAR(100),
+    `price` DECIMAL(10, 2),
+    `image` VARCHAR(255),
+    `quantity` INT
+);
+
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    phone VARCHAR(15) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('user', 'admin') NOT NULL,
+    security_question VARCHAR(255) NOT NULL,
+    security_answer VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE offer (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    text_column TEXT NOT NULL,
+    image_column VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    start_date DATETIME NOT NULL,
+    end_date DATETIME NOT NULL
+);
+
+
