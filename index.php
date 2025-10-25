@@ -252,7 +252,7 @@ $conn->close();
             }
             window.reload();
         }
-
+//test reload
         function reload() {
             window.location.reload();
         }
