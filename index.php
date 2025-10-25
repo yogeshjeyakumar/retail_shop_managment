@@ -252,7 +252,7 @@ $conn->close();
             }
             window.reload();
         }
-//test reload
+//test reload function
         function reload() {
             window.location.reload();
         }
@@ -264,5 +264,6 @@ $conn->close();
     </script>
 
 </body>
+
 
 </html>
